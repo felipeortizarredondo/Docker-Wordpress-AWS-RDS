@@ -8,6 +8,7 @@ Este github proporciona instrucciones sobre cómo implementar WordPress en un co
 ## Prerrequisitos
 
 - Este docker funciona con un entorno linux distribución ubuntu-server
+- La maquina debe tener abierto el puerto 80 "http" de ENTRADA
 - Docker instalado en tu instancia EC2 de AWS.
 - Acceso a Amazon RDS con una instancia Aurora funcionando.
 
@@ -121,4 +122,19 @@ Sigue los pasos a continuación para ejecutar el contenedor Docker de WordPress:
   docker build -t Docker-Wordpress-AWS-RDS .
   ```
 
+Esto construirá la imagen del contenedor utilizando el archivo Dockerfile proporcionado.
+
+1. Una vez que se haya construido la imagen del contenedor, ejecuta el siguiente comando para iniciar el contenedor:
+
+  ```bash
+  docker run -p 8080:80 -d Docker-Wordpress-AWS-RDS
+  ```
+
+2. Abre un navegador web y visita la siguiente URL: `http://[tu_ip_publica]`
+
+3. Esto te llevará al instalador de WordPress, donde puedes configurar la instalación y crear tu sitio web.
+
+Sigue las instrucciones en pantalla para completar la configuración de WordPress.
+
+¡Listo! Ahora tienes WordPress ejecutándose en un contenedor Docker en tu máquina local.
 
