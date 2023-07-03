@@ -7,6 +7,7 @@ Este github proporciona instrucciones sobre cómo implementar WordPress en un co
 
 ## Prerrequisitos
 
+- Este docker funciona con un entorno linux distribución ubuntu-server
 - Docker instalado en tu instancia EC2 de AWS.
 - Acceso a Amazon RDS con una instancia Aurora funcionando.
 
