@@ -98,10 +98,13 @@ Deberías ver la base de datos `wordpress` en la lista.
 
 ## Configurar conexión a la base de datos editando los parametros del dockerfile con este script
 
-Debes posisiocionarte adentro del directorio "Docker-Wordpress-AWS-RDS" descargado previamente y ejecuta este comando para editar lel parametro para ajustar el `Nombre del punto de enlace` Copia tu URL de punto de enlace y pegalo donde indica el `script`. Debes tener permiso "Root" para ejecutarlo
+Debes posisiocionarte adentro del directorio "Docker-Wordpress-AWS-RDS" descargado previamente y ejecuta este comando para editar lel parametro para ajustar el `Nombre del punto de enlace` Copia tu URL de punto de enlace y pegalo donde indica el `script`. Debes tener permiso "Root" para ejecutarlo.
 
   ```bash
-  sudo sh config_database.sh
+  sudo su
+  ```
+  ```bash
+  sh config_database.sh
   ```
 
 # Iniciar Docker WordPress
