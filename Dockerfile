@@ -1,19 +1,17 @@
-# Use an official Wordpress runtime as a parent image
+# Utiliza una imagen de ejecución oficial de Wordpress como imagen base
 FROM wordpress:latest
 
-# Set working directory in the container
+# Establece el directorio de trabajo en el contenedor
 WORKDIR /var/www/html
 
-# Copy the current directory contents into the container at /var/www/html
+# Copia el contenido del directorio actual al contenedor en /var/www/html
 COPY . /var/www/html
 
-# Make port 80 available to the world outside this container
+# Expone el puerto 80 al mundo exterior del contenedor
 EXPOSE 80
 
-# Define environment variable for Wordpress to connect to Aurora
+# Define variables de entorno para que Wordpress se conecte a Aurora
 ENV WORDPRESS_DB_HOST=db-wordpress.cluster-chbrcmzpmf7a.us-east-1.rds.amazonaws.com
 ENV WORDPRESS_DB_USER=wordpressuser
 ENV WORDPRESS_DB_PASSWORD=wordpresspassword
 ENV WORDPRESS_DB_NAME=wordpress
-
-# Run Wordpress when the container launches
