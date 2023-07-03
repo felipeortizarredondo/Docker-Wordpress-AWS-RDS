@@ -79,6 +79,26 @@ Deberías ver la base de datos `wordpress` en la lista.
 
 ## Configurar conexión a la base de datos editando los parametros del dockerfile con este script
 
-Debes posisiocionarte adentro del directorio "Docker-Wordpress-AWS-RDS" descargado previamente y ejecuta este comando para editar lel parametro del 
+Debes posisiocionarte adentro del directorio "Docker-Wordpress-AWS-RDS" descargado previamente y ejecuta este comando para editar lel parametro para ajustar el `Nombre del punto de enlace` Copia tu URL de punto de enlace y pegalo donde indica el `script`
+
+`sh config_database.sh`
+
+# Iniciar Docker WordPress
+
+Este repositorio contiene un archivo Dockerfile y los archivos necesarios para ejecutar WordPress en un contenedor Docker.
+
+## Prerrequisitos
+
+- Docker instalado en tu máquina.
+
+## Instrucciones de uso
+
+Sigue los pasos a continuación para ejecutar el contenedor Docker de WordPress:
+
+1. Construye la imagen del contenedor Docker utilizando el siguiente comando:
+
+   ```bash
+   docker build -t wordpress-docker .
+
 
 
