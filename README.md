@@ -52,7 +52,9 @@ Para instalar MySQL en tu instancia EC2, ejecuta los siguientes comandos:
 
 Para conectarte a la base de datos Aurora en RDS, primero necesitas conectarte a tu instancia EC2. Desde allí, ejecuta el siguiente comando para conectarte a tu base de datos:
 
-`mysql -h [nombre_del_host] -P 3306 -u admin -p`
+`mysql -h nombre_del_punto_de_enlace -P 3306 -u admin -p` 
+(Donde dice "nombre_del_punto_de_enlace" cambialo por el URL Tipo Instancia de Escritor)
+Para ver ese datos debes ubicarte ak servicio de Amazon RDS, Base de datos y veras tu base creada y seleccionala y veras mas abajo el URL que te indico en el paso anterior
 
 
 Una vez conectado, puedes crear un nuevo usuario en la base de datos y otorgarle todos los privilegios con los siguientes comandos SQL:
@@ -71,5 +73,9 @@ Para verificar que la conexión a la base de datos se ha establecido correctamen
   `SHOW DATABASES;`
 
 Deberías ver la base de datos `wordpress` en la lista.
+
+## Configurar conexión a la base de datos editando los parametros del dockerfile con este script
+
+Debes posisiocionarte adentro del directorio "Docker-Wordpress-AWS-RDS" descargado previamente y ejecuta este comando para editar lel parametro del 
 
 
