@@ -18,3 +18,5 @@ ENV WORDPRESS_DB_HOST=db-wordpress.cluster-chbrcmzpmf7a.us-east-1.rds.amazonaws.
 ENV WORDPRESS_DB_USER=wordpressuser
 ENV WORDPRESS_DB_PASSWORD=wordpresspassword
 ENV WORDPRESS_DB_NAME=wordpress
+
+CMD ["apache2-foreground"]
