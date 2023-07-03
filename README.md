@@ -75,6 +75,9 @@ Para ver ese dato debes ubicarte al servicio de Amazon RDS, Base de datos y vera
 Una vez conectado, puedes crear un nuevo usuario en la base de datos y otorgarle todos los privilegios con los siguientes comandos SQL:
 
 ```bash
+CREATE DATABASE wordpress CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+```bash
 CREATE USER 'wordpressuser'@'%' IDENTIFIED BY 'wordpresspassword';
 ```
 ```bash
