@@ -123,7 +123,7 @@ Sigue los pasos a continuación para ejecutar el contenedor Docker de WordPress:
 1. Construye la imagen del contenedor Docker utilizando el siguiente comando:
 
   ```bash
-  sudo docker build -t Docker-Wordpress-AWS-RDS .
+  sudo docker build -t docker-wordpress-aws-rds .
   ```
 
 Esto construirá la imagen del contenedor utilizando el archivo Dockerfile proporcionado.
@@ -131,7 +131,7 @@ Esto construirá la imagen del contenedor utilizando el archivo Dockerfile propo
 1. Una vez que se haya construido la imagen del contenedor, ejecuta el siguiente comando para iniciar el contenedor:
 
   ```bash
-  sudo docker run -p 8080:80 -d Docker-Wordpress-AWS-RDS
+  sudo docker run -p 8080:80 -d docker-wordpress-aws-rds
   ```
 
 2. Abre un navegador web y visita la siguiente URL: `http://[tu_ip_publica]`
