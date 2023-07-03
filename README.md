@@ -65,7 +65,7 @@ Para conectarte a la base de datos Aurora en RDS, primero necesitas conectarte a
 
 `NOTA:`
 (Donde dice "nombre_del_punto_de_enlace" cambialo por el URL Tipo Instancia de Escritor)
-Para ver ese dato debes ubicarte al servicio de Amazon RDS, Base de datos y veras tu base creada y seleccionala y veras mas abajo el URL que te indico en el paso anterior
+Para ver ese dato debes ubicarte al servicio de Amazon RDS, Base de datos y veras tu base creada. Seleccionala y veras mas abajo el URL que te indico en el paso anterior
 
 
 Una vez conectado, puedes crear un nuevo usuario en la base de datos y otorgarle todos los privilegios con los siguientes comandos SQL:
