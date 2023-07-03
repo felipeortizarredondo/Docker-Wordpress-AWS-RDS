@@ -160,7 +160,7 @@ Esto construirá la imagen del contenedor utilizando el archivo Dockerfile propo
 1. Una vez que se haya construido la imagen del contenedor, ejecuta el siguiente comando para iniciar el contenedor:
 
   ```bash
-  sudo docker run -p 8080:80 -d docker-wordpress-aws-rds
+  sudo docker run -d -p 80:80 docker-wordpress-aws-rds
   ```
 
 2. Abre un navegador web y visita la siguiente URL: `http://[tu_ip_publica]`
