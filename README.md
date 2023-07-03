@@ -39,10 +39,10 @@ Para crear una base de datos Aurora (compatible con MySQL) en Amazon RDS y conec
 
 Para instalar MySQL en tu instancia EC2, ejecuta los siguientes comandos:
 
-`sudo apt install software-properties-common apt-transport-https -y`
-`sudo add-apt-repository ppa:ondrej/php -y`
-`sudo apt-get update`
-`sudo apt-get install mariadb-server mariadb-client`
+`sudo apt install software-properties-common apt-transport-https -y
+sudo add-apt-repository ppa:ondrej/php -y
+sudo apt-get update
+sudo apt-get install mariadb-server mariadb-client`
 
 
 ## Conexión a la base de datos y configuración de permisos
