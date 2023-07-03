@@ -19,7 +19,7 @@ Este github proporciona instrucciones sobre cómo implementar WordPress en un co
 Puedes descargar el contenedor Docker utilizando "git clone":
 
   ```bash
-  git clone https://github.com/felipeortizarredondo/Docker-Wordpress-AWS-RDS`
+  git clone https://github.com/felipeortizarredondo/Docker-Wordpress-AWS-RDS
   ```
 
 ## Creación de la base de datos Aurora y conexión con EC2
