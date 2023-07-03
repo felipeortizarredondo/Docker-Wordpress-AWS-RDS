@@ -15,8 +15,9 @@ Este github proporciona instrucciones sobre cómo implementar WordPress en un co
 
 Puedes descargar el contenedor Docker utilizando "git clone":
 
-  `git clone https://github.com/felipeortizarredondo/Docker-Wordpress-AWS-RDS`
-
+  ```bash
+  git clone https://github.com/felipeortizarredondo/Docker-Wordpress-AWS-RDS`
+  ```
 
 ## Creación de la base de datos Aurora y conexión con EC2
 
@@ -40,20 +41,26 @@ Para crear una base de datos Aurora (compatible con MySQL) en Amazon RDS y conec
 
 Para instalar MySQL en tu instancia EC2, ejecuta los siguientes comandos:
 
-`sudo apt install software-properties-common apt-transport-https -y`
-
-`sudo add-apt-repository ppa:ondrej/php -y`
-
-`sudo apt-get update`
-
-`sudo apt-get install mariadb-server mariadb-client`
-
+```bash
+sudo apt install software-properties-common apt-transport-https -y
+```
+```bash
+sudo add-apt-repository ppa:ondrej/php -y
+```
+```bash
+sudo apt-get update
+```
+```bash
+sudo apt-get install mariadb-server mariadb-client
+```
 
 ## Conexión a la base de datos y configuración de permisos
 
 Para conectarte a la base de datos Aurora en RDS, primero necesitas conectarte a tu instancia EC2. Desde allí, ejecuta el siguiente comando para conectarte a tu base de datos:
 
-`mysql -h nombre_del_punto_de_enlace -P 3306 -u admin -p` 
+  ```bash
+  mysql -h nombre_del_punto_de_enlace -P 3306 -u admin -p
+  ```
 
 `NOTA:`
 (Donde dice "nombre_del_punto_de_enlace" cambialo por el URL Tipo Instancia de Escritor)
@@ -62,18 +69,28 @@ Para ver ese dato debes ubicarte al servicio de Amazon RDS, Base de datos y vera
 
 Una vez conectado, puedes crear un nuevo usuario en la base de datos y otorgarle todos los privilegios con los siguientes comandos SQL:
 
-`CREATE USER 'wordpressuser'@'%' IDENTIFIED BY 'wordpresspassword';`
-
-`GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpressuser'@'%';`
-
-`FLUSH PRIVILEGES;`
-
+```bash
+CREATE USER 'wordpressuser'@'%' IDENTIFIED BY 'wordpresspassword';
+```
+```bash
+GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpressuser'@'%';
+```
+```bash
+FLUSH PRIVILEGES;
+```
 
 ## Verificación de la conexión
 
 Para verificar que la conexión a la base de datos se ha establecido correctamente, puedes ejecutar el siguiente comando SQL desde la misma consola MySQL:
 
-  `SHOW DATABASES;`
+  ```bash
+  SHOW DATABASES;
+  ```
+Para salir del terminal solo pon este comando
+
+  ```bash
+  QUIT;
+  ```
 
 Deberías ver la base de datos `wordpress` en la lista.
 
@@ -100,8 +117,8 @@ Sigue los pasos a continuación para ejecutar el contenedor Docker de WordPress:
 1. ubicate dentro del directorio "Docker-Wordpress-AWS-RDS" descargado
 1. Construye la imagen del contenedor Docker utilizando el siguiente comando:
 
-   ```bash
-   docker build -t Docker-Wordpress-AWS-RDS .
-
+  ```bash
+  docker build -t Docker-Wordpress-AWS-RDS .
+  ```
 
 
