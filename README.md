@@ -1,5 +1,7 @@
 # Docker-Wordpress-AWS-RDS
-Conectarmos un wordpress a traves de Docker y las plataformas que se utilizara es un EC2 de AWS y la base de datos creado por RDS AURORA
+Conectarmos un wordpress a traves de Docker y las plataformas que se utilizara sun: 
+  - EC2 de AWS
+  - base de datos creado por Amazon RDS "AURORA"
 
 # Docker WordPress con Amazon RDS Aurora
 
