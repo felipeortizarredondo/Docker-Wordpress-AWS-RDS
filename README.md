@@ -90,12 +90,11 @@ Para verificar que la conexión a la base de datos se ha establecido correctamen
   SHOW DATABASES;
   ```
 Para salir del terminal solo pon este comando
+Deberías ver la base de datos `wordpress` en la lista.
 
   ```bash
   QUIT;
   ```
-
-Deberías ver la base de datos `wordpress` en la lista.
 
 ## Configurar conexión a la base de datos editando los parametros del dockerfile con este script
 
