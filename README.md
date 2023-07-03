@@ -115,6 +115,30 @@ Este repositorio contiene un archivo Dockerfile y los archivos necesarios para e
 
 - Docker instalado en tu máquina.
 
+Si no tienes instalado Docker sigue estos pasos:
+
+  ```bash
+  sudo apt update
+  ```
+  ```bash
+  sudo apt install apt-transport-https ca-certificates curl software-properties-common
+  ```
+  ```bash
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+  ```
+  ```bash
+  echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+  ```bash
+  sudo apt update
+  ```
+  ```bash
+  sudo apt install docker-ce docker-ce-cli containerd.io
+  ```
+  ```bash
+  sudo systemctl status docker
+  ```
+
 ## Instrucciones de uso
 
 Sigue los pasos a continuación para ejecutar el contenedor Docker de WordPress:
