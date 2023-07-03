@@ -61,13 +61,12 @@ sudo apt-get install mariadb-server mariadb-client
 
 Para conectarte a la base de datos Aurora en RDS, primero necesitas conectarte a tu instancia EC2. Desde allí, ejecuta el siguiente comando para conectarte a tu base de datos:
 
- `El user es el usuario que creaste en el RDS`
-
- `La password es la contraseña que creaste en el RDS`
+`El user es el usuario que creaste en el RDS`
 
   ```bash
-  sudo mysql -h nombre_del_punto_de_enlace -P 3306 -u [user] -p [password]
+  sudo mysql -h nombre_del_punto_de_enlace -P 3306 -u [user] -p
   ```
+`La password es la contraseña que creaste en el RDS`
 
 `NOTA:`
 (Donde dice "nombre_del_punto_de_enlace" cambialo por el URL Tipo Instancia de Escritor)
