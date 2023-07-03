@@ -19,7 +19,7 @@ Este github proporciona instrucciones sobre cómo implementar WordPress en un co
 Puedes descargar el contenedor Docker utilizando "git clone":
 
   ```bash
-  git clone https://github.com/felipeortizarredondo/Docker-Wordpress-AWS-RDS
+  sudo git clone https://github.com/felipeortizarredondo/Docker-Wordpress-AWS-RDS
   ```
 
 ## Creación de la base de datos Aurora y conexión con EC2
@@ -62,7 +62,7 @@ sudo apt-get install mariadb-server mariadb-client
 Para conectarte a la base de datos Aurora en RDS, primero necesitas conectarte a tu instancia EC2. Desde allí, ejecuta el siguiente comando para conectarte a tu base de datos:
 
   ```bash
-  mysql -h nombre_del_punto_de_enlace -P 3306 -u admin -p
+  sudo mysql -h nombre_del_punto_de_enlace -P 3306 -u admin -p
   ```
 
 `NOTA:`
@@ -101,7 +101,7 @@ Deberías ver la base de datos `wordpress` en la lista.
 Debes posisiocionarte adentro del directorio "Docker-Wordpress-AWS-RDS" descargado previamente y ejecuta este comando para editar lel parametro para ajustar el `Nombre del punto de enlace` Copia tu URL de punto de enlace y pegalo donde indica el `script`. Debes tener permiso "Root" para ejecutarlo
 
   ```bash
-  sh config_database.sh
+  sudo sh config_database.sh
   ```
 
 # Iniciar Docker WordPress
@@ -120,7 +120,7 @@ Sigue los pasos a continuación para ejecutar el contenedor Docker de WordPress:
 1. Construye la imagen del contenedor Docker utilizando el siguiente comando:
 
   ```bash
-  docker build -t Docker-Wordpress-AWS-RDS .
+  sudo docker build -t Docker-Wordpress-AWS-RDS .
   ```
 
 Esto construirá la imagen del contenedor utilizando el archivo Dockerfile proporcionado.
@@ -128,7 +128,7 @@ Esto construirá la imagen del contenedor utilizando el archivo Dockerfile propo
 1. Una vez que se haya construido la imagen del contenedor, ejecuta el siguiente comando para iniciar el contenedor:
 
   ```bash
-  docker run -p 8080:80 -d Docker-Wordpress-AWS-RDS
+  sudo docker run -p 8080:80 -d Docker-Wordpress-AWS-RDS
   ```
 
 2. Abre un navegador web y visita la siguiente URL: `http://[tu_ip_publica]`
