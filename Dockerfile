@@ -1,6 +1,9 @@
 # Utiliza una imagen de ejecución oficial de Wordpress como imagen base
 FROM wordpress:latest
 
+# Instalar Apache
+RUN apt-get update && apt-get install -y apache2
+
 # Establece el directorio de trabajo en el contenedor
 WORKDIR /var/www/html
 
